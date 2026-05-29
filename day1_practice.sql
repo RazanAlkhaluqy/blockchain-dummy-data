@@ -45,9 +45,9 @@ SELECT
     COUNT(*)                                AS total_orders,
     COUNT(*) FILTER (WHERE status = 'completed') AS completed_orders,
     ROUND(SUM(final_amount_usd)
-          FILTER (WHERE status = 'completed'), 2) AS revenue_usd,
+          FILTER (WHERE status = 'completed')::numeric, 2) AS revenue_usd,
     ROUND(AVG(final_amount_usd)
-          FILTER (WHERE status = 'completed'), 2) AS avg_order_usd
+          FILTER (WHERE status = 'completed')::numeric, 2) AS avg_order_usd
 FROM orders
 GROUP BY 1
 ORDER BY 1;
@@ -61,7 +61,7 @@ SELECT
     u.plan_tier,
     u.country,
     COUNT(o.order_id)                     AS total_orders,
-    ROUND(SUM(o.final_amount_usd), 2)     AS lifetime_value_usd,
+    ROUND(SUM(o.final_amount_usd)::numeric, 2)     AS lifetime_value_usd,
     MAX(o.created_at)                     AS last_order_at
 FROM users u
 JOIN orders o ON u.user_id = o.user_id
@@ -77,8 +77,8 @@ SELECT
     COALESCE(payment_method, 'unknown')   AS payment_method,
     COALESCE(chain, 'fiat')               AS chain,
     COUNT(*)                              AS orders,
-    ROUND(SUM(final_amount_usd), 2)       AS revenue_usd,
-    ROUND(AVG(gas_fee_usd), 4)            AS avg_gas_usd
+    ROUND(SUM(final_amount_usd)::numeric, 2)       AS revenue_usd,
+    ROUND(AVG(gas_fee_usd)::numeric, 4)            AS avg_gas_usd
 FROM orders
 WHERE status = 'completed'
 GROUP BY payment_method, chain
@@ -95,10 +95,10 @@ SELECT
     COUNT(*) FILTER (WHERE status = 'failed')     AS failed,
     ROUND(
         100.0 * COUNT(*) FILTER (WHERE status = 'completed')
-        / NULLIF(COUNT(*), 0), 1
+        / NULLIF(COUNT(*), 0)::numeric, 1
     )                                              AS completion_rate_pct,
-    ROUND(SUM(final_amount_usd)
-          FILTER (WHERE status = 'completed'), 2)  AS total_revenue_usd
+    ROUND(SUM(final_amount_usd)::numeric
+          FILTER (WHERE status = 'completed')::numeric, 2)  AS total_revenue_usd
 FROM orders
 GROUP BY product_name
 ORDER BY total_revenue_usd DESC;
@@ -134,8 +134,8 @@ SELECT
     u.kyc_verified,
     COUNT(DISTINCT u.user_id)             AS users,
     COUNT(o.order_id)                     AS orders,
-    ROUND(SUM(o.final_amount_usd), 2)     AS revenue_usd,
-    ROUND(AVG(o.final_amount_usd), 2)     AS avg_order_usd
+    ROUND(SUM(o.final_amount_usd)::numeric, 2)     AS revenue_usd,
+    ROUND(AVG(o.final_amount_usd)::numeric, 2)     AS avg_order_usd
 FROM users u
 LEFT JOIN orders o ON u.user_id = o.user_id AND o.status = 'completed'
 GROUP BY u.kyc_verified;
