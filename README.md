@@ -1,5 +1,5 @@
 # Day 1 — Python + SQL Foundations
-### Blockchain Startup Analytics · Data Engineering Roadmap
+### Blockchain Analytics dummy data· Data Engineering Roadmap
 
 ---
 
