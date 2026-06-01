@@ -48,6 +48,15 @@ def log(msg, level="INFO"):
     c = colors.get(level, END)
     print(f"  {c}[{level}]{END} {ts} — {msg}")
 
+
+VALID_CHAINS = {
+    "ethereum",
+    "polygon",
+    "solana",
+    "arbitrum",
+    "optimism"
+}
+
 # ════════════════════════════════════════════════════════════════
 # TASK 1 — DATA LINEAGE
 # ════════════════════════════════════════════════════════════════
@@ -232,8 +241,8 @@ runner.expect_column_not_null("tx_hash")
 runner.expect_column_not_null("timestamp")
 runner.expect_column_unique("event_id")
 runner.expect_column_unique("tx_hash")
-runner.expect_column_values_in_set("chain",
-    {"ethereum","polygon","solana","arbitrum","optimism"})
+
+runner.expect_column_values_in_set("chain", VALID_CHAINS)
 runner.expect_column_values_in_set("status", {"confirmed"})
 runner.expect_column_min_value("amount_usd", 0)
 runner.expect_column_regex("tx_hash", r"^0x[a-f0-9]{64}$")
@@ -414,7 +423,7 @@ log("TRANSFORM: quality checks + enrichment...")
 df_clean = df_raw[
     df_raw["tx_hash"].notnull() &
     df_raw["amount_usd"].gt(0) &
-    df_raw["chain"].isin(chains) &
+    df_raw["chain"].isin(VALID_CHAINS) &
     ~df_raw["tx_hash"].duplicated()
 ].copy()
 df_clean["is_defi"]      = df_clean["protocol"].ne("None").astype(int)
@@ -567,5 +576,5 @@ print(f"""
   git commit -m "day7: governance, data quality, GDPR, capstone — roadmap complete"
   git push
 
-  Your portfolio: https://github.com/YOUR_USERNAME/data-engineering-roadmap
+  Your portfolio: https://github.com/RazanAlkhaluqy/blockchain-dummy-data
 """)
