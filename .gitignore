@@ -8,7 +8,7 @@ __pycache__/
 *.parquet
 *.txt
 *.parquet
-*yml
+*.yml
 
 # folders commonly used in data engineering
 data/
