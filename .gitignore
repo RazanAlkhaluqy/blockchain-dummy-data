@@ -1,2 +1,27 @@
 *.pyc
 __pycache__/
+# =========================
+# DATA FILES (IGNORE THESE)
+# =========================
+*.csv
+*.json
+*.parquet
+*.txt
+
+# folders commonly used in data engineering
+data/
+output/
+outputs/
+logs/
+checkpoints/
+
+# Spark / Kafka temporary files
+*.crc
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# environment
+.venv/
