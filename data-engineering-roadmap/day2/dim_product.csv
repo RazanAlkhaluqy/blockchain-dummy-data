@@ -1,0 +1,11 @@
+product_id,product_name,product_type,category,base_price_usd,billing_cycle
+1,NFT Marketplace Pro,subscription,platform,99.0,monthly
+2,Blockchain Analytics Dashboard,subscription,analytics,199.0,monthly
+3,Smart Contract Audit Tool,one_time,security,499.0,
+4,DeFi Portfolio Tracker,subscription,defi,49.0,monthly
+5,Crypto Tax Reporter,one_time,compliance,79.0,
+6,Token Launch Kit,one_time,platform,999.0,
+7,Node Monitoring Service,subscription,infrastructure,29.0,monthly
+8,Web3 API Access - Starter,subscription,api,19.0,monthly
+9,Web3 API Access - Pro,subscription,api,149.0,monthly
+10,Wallet Intelligence Report,one_time,analytics,149.0,

@@ -1,0 +1,201 @@
+run_id,dag_id,run_date,state,duration_sec,rows_processed,error_msg
+RUN0001,dbt_run_models,2024-11-04 04:00:00,success,141.3,18008,
+RUN0002,transform_fact_transactions,2024-03-24 11:00:00,success,398.5,10127,
+RUN0003,ingest_blockchain_events,2024-05-18 16:00:00,success,645.8,17040,
+RUN0004,ingest_api_prices,2024-03-01 21:00:00,success,844.8,33915,
+RUN0005,load_warehouse,2024-11-22 03:00:00,success,710.7,10690,
+RUN0006,transform_fact_transactions,2024-09-20 04:00:00,success,78.6,45634,
+RUN0007,transform_fact_transactions,2024-08-12 12:00:00,success,393.4,15128,
+RUN0008,ingest_api_prices,2024-03-14 21:00:00,success,314.9,41227,
+RUN0009,ingest_blockchain_events,2024-08-15 12:00:00,success,816.4,30558,
+RUN0010,load_warehouse,2024-04-26 13:00:00,success,116.4,43853,
+RUN0011,load_warehouse,2024-04-27 13:00:00,success,42.5,24130,
+RUN0012,ingest_blockchain_events,2024-08-27 18:00:00,running,,0,
+RUN0013,ingest_api_prices,2024-12-04 01:00:00,running,,0,
+RUN0014,ingest_api_prices,2024-10-16 21:00:00,success,168.4,6274,
+RUN0015,dbt_run_models,2024-05-16 01:00:00,failed,444.6,0,ConnectionError: DB timeout
+RUN0016,transform_fact_transactions,2024-04-09 14:00:00,success,603.9,12531,
+RUN0017,dbt_run_models,2024-03-17 02:00:00,failed,756.1,0,ConnectionError: DB timeout
+RUN0018,transform_fact_transactions,2024-01-22 10:00:00,success,79.5,12912,
+RUN0019,transform_fact_transactions,2024-12-05 15:00:00,success,228.5,16715,
+RUN0020,load_warehouse,2024-11-22 10:00:00,success,198.7,19849,
+RUN0021,transform_fact_transactions,2024-11-06 15:00:00,running,,0,
+RUN0022,ingest_api_prices,2024-05-21 20:00:00,success,88.4,28612,
+RUN0023,transform_fact_transactions,2024-10-06 13:00:00,success,708.8,36724,
+RUN0024,ingest_blockchain_events,2024-04-28 21:00:00,success,164.5,3899,
+RUN0025,ingest_blockchain_events,2024-01-07 00:00:00,running,,0,
+RUN0026,transform_fact_transactions,2024-10-02 23:00:00,success,807.6,40857,
+RUN0027,dbt_run_models,2024-07-07 15:00:00,running,,0,
+RUN0028,ingest_blockchain_events,2024-08-24 21:00:00,running,,0,
+RUN0029,ingest_blockchain_events,2024-02-22 18:00:00,failed,496.8,0,ConnectionError: DB timeout
+RUN0030,ingest_blockchain_events,2024-03-26 07:00:00,success,620.8,37642,
+RUN0031,ingest_blockchain_events,2024-06-17 04:00:00,failed,473.3,0,ConnectionError: DB timeout
+RUN0032,ingest_blockchain_events,2024-06-06 20:00:00,success,383.0,39093,
+RUN0033,dbt_run_models,2024-12-15 05:00:00,success,676.5,31552,
+RUN0034,transform_fact_transactions,2024-07-06 22:00:00,running,,0,
+RUN0035,load_warehouse,2024-01-13 18:00:00,success,628.4,23638,
+RUN0036,transform_fact_transactions,2024-12-28 13:00:00,running,,0,
+RUN0037,ingest_api_prices,2024-05-07 22:00:00,success,238.1,30650,
+RUN0038,transform_fact_transactions,2024-01-13 07:00:00,success,353.9,8289,
+RUN0039,dbt_run_models,2024-08-10 18:00:00,failed,61.4,0,ConnectionError: DB timeout
+RUN0040,dbt_run_models,2024-10-29 16:00:00,failed,144.0,0,ConnectionError: DB timeout
+RUN0041,ingest_api_prices,2024-04-15 15:00:00,success,470.6,8159,
+RUN0042,ingest_blockchain_events,2024-07-16 09:00:00,running,,0,
+RUN0043,transform_fact_transactions,2024-10-04 20:00:00,success,95.2,40326,
+RUN0044,ingest_blockchain_events,2024-04-04 00:00:00,success,343.6,6120,
+RUN0045,load_warehouse,2024-08-22 01:00:00,success,195.5,15383,
+RUN0046,ingest_blockchain_events,2024-01-12 21:00:00,success,379.7,16897,
+RUN0047,load_warehouse,2024-08-17 12:00:00,failed,510.2,0,ConnectionError: DB timeout
+RUN0048,transform_fact_transactions,2024-12-03 20:00:00,success,374.1,851,
+RUN0049,ingest_blockchain_events,2024-05-27 22:00:00,success,866.4,46589,
+RUN0050,load_warehouse,2024-04-29 16:00:00,failed,835.6,0,ConnectionError: DB timeout
+RUN0051,dbt_run_models,2024-05-28 07:00:00,failed,847.1,0,ConnectionError: DB timeout
+RUN0052,ingest_api_prices,2024-07-28 06:00:00,success,626.9,4162,
+RUN0053,dbt_run_models,2024-10-10 21:00:00,running,,0,
+RUN0054,dbt_run_models,2024-01-28 17:00:00,success,772.5,20808,
+RUN0055,load_warehouse,2024-11-24 11:00:00,success,426.9,43841,
+RUN0056,dbt_run_models,2024-08-15 02:00:00,success,182.3,43248,
+RUN0057,ingest_blockchain_events,2024-04-10 06:00:00,success,537.4,7910,
+RUN0058,dbt_run_models,2024-07-08 18:00:00,success,889.2,26664,
+RUN0059,transform_fact_transactions,2024-12-07 06:00:00,failed,259.6,0,ConnectionError: DB timeout
+RUN0060,ingest_api_prices,2024-04-23 15:00:00,success,66.4,42129,
+RUN0061,transform_fact_transactions,2024-06-28 14:00:00,success,362.2,45657,
+RUN0062,transform_fact_transactions,2024-10-18 03:00:00,success,750.6,17158,
+RUN0063,load_warehouse,2024-09-17 02:00:00,failed,170.5,0,ConnectionError: DB timeout
+RUN0064,transform_fact_transactions,2024-02-14 12:00:00,success,273.7,31364,
+RUN0065,dbt_run_models,2024-04-01 15:00:00,running,,0,
+RUN0066,load_warehouse,2024-07-19 08:00:00,failed,226.8,0,ConnectionError: DB timeout
+RUN0067,transform_fact_transactions,2024-11-03 21:00:00,failed,426.7,0,ConnectionError: DB timeout
+RUN0068,load_warehouse,2024-07-05 05:00:00,success,50.7,33923,
+RUN0069,transform_fact_transactions,2024-04-01 18:00:00,failed,840.8,0,ConnectionError: DB timeout
+RUN0070,load_warehouse,2024-03-16 00:00:00,success,577.3,2238,
+RUN0071,dbt_run_models,2024-02-04 20:00:00,success,114.4,36035,
+RUN0072,ingest_api_prices,2024-06-05 07:00:00,failed,178.9,0,ConnectionError: DB timeout
+RUN0073,ingest_blockchain_events,2024-06-14 04:00:00,failed,320.8,0,ConnectionError: DB timeout
+RUN0074,ingest_api_prices,2024-03-17 20:00:00,success,512.5,32582,
+RUN0075,load_warehouse,2024-10-01 00:00:00,failed,776.8,0,ConnectionError: DB timeout
+RUN0076,ingest_blockchain_events,2024-07-22 20:00:00,failed,889.0,0,ConnectionError: DB timeout
+RUN0077,ingest_blockchain_events,2024-11-23 15:00:00,running,,0,
+RUN0078,dbt_run_models,2024-05-27 08:00:00,failed,390.6,0,ConnectionError: DB timeout
+RUN0079,load_warehouse,2024-01-06 23:00:00,running,,0,
+RUN0080,load_warehouse,2024-06-14 06:00:00,failed,432.9,0,ConnectionError: DB timeout
+RUN0081,ingest_api_prices,2024-02-13 13:00:00,success,65.8,24250,
+RUN0082,ingest_api_prices,2024-01-31 00:00:00,failed,272.7,0,ConnectionError: DB timeout
+RUN0083,dbt_run_models,2024-02-22 05:00:00,failed,748.2,0,ConnectionError: DB timeout
+RUN0084,dbt_run_models,2024-05-29 12:00:00,running,,0,
+RUN0085,dbt_run_models,2024-10-18 21:00:00,failed,92.2,0,ConnectionError: DB timeout
+RUN0086,ingest_blockchain_events,2024-04-25 12:00:00,failed,852.3,0,ConnectionError: DB timeout
+RUN0087,ingest_api_prices,2024-07-29 21:00:00,success,714.9,7823,
+RUN0088,dbt_run_models,2024-02-05 05:00:00,success,593.1,7689,
+RUN0089,load_warehouse,2024-10-01 10:00:00,running,,0,
+RUN0090,transform_fact_transactions,2024-10-23 04:00:00,running,,0,
+RUN0091,dbt_run_models,2024-06-14 05:00:00,success,161.7,12813,
+RUN0092,dbt_run_models,2024-07-25 07:00:00,failed,643.2,0,ConnectionError: DB timeout
+RUN0093,dbt_run_models,2024-11-03 12:00:00,success,474.2,47092,
+RUN0094,transform_fact_transactions,2024-06-19 14:00:00,failed,65.9,0,ConnectionError: DB timeout
+RUN0095,ingest_blockchain_events,2024-12-26 01:00:00,success,720.1,40148,
+RUN0096,ingest_blockchain_events,2024-09-18 03:00:00,success,59.9,16304,
+RUN0097,dbt_run_models,2024-06-26 04:00:00,success,282.6,16241,
+RUN0098,ingest_blockchain_events,2024-05-24 07:00:00,success,680.1,32882,
+RUN0099,ingest_blockchain_events,2024-04-06 00:00:00,success,81.0,12044,
+RUN0100,ingest_blockchain_events,2024-05-20 18:00:00,success,723.1,15496,
+RUN0101,dbt_run_models,2024-01-05 16:00:00,failed,555.0,0,ConnectionError: DB timeout
+RUN0102,load_warehouse,2024-05-14 06:00:00,success,538.8,15049,
+RUN0103,load_warehouse,2024-05-11 10:00:00,success,70.9,45215,
+RUN0104,ingest_api_prices,2024-03-29 14:00:00,success,470.6,22415,
+RUN0105,dbt_run_models,2024-11-26 16:00:00,success,68.6,42336,
+RUN0106,load_warehouse,2024-04-21 01:00:00,success,660.6,5886,
+RUN0107,load_warehouse,2024-03-27 12:00:00,failed,715.6,0,ConnectionError: DB timeout
+RUN0108,ingest_api_prices,2024-08-10 12:00:00,failed,150.0,0,ConnectionError: DB timeout
+RUN0109,load_warehouse,2024-12-27 19:00:00,running,,0,
+RUN0110,transform_fact_transactions,2024-12-12 19:00:00,failed,137.4,0,ConnectionError: DB timeout
+RUN0111,dbt_run_models,2024-04-18 15:00:00,failed,799.6,0,ConnectionError: DB timeout
+RUN0112,load_warehouse,2024-03-01 21:00:00,failed,798.6,0,ConnectionError: DB timeout
+RUN0113,load_warehouse,2024-10-24 14:00:00,success,305.8,23393,
+RUN0114,ingest_api_prices,2024-06-25 15:00:00,success,696.2,7532,
+RUN0115,ingest_api_prices,2024-11-18 22:00:00,running,,0,
+RUN0116,ingest_blockchain_events,2024-03-26 20:00:00,success,390.7,8285,
+RUN0117,dbt_run_models,2024-02-29 06:00:00,success,530.8,33613,
+RUN0118,dbt_run_models,2024-05-18 12:00:00,success,829.3,14322,
+RUN0119,ingest_api_prices,2024-07-20 00:00:00,success,132.5,14040,
+RUN0120,load_warehouse,2024-01-25 08:00:00,success,32.0,17662,
+RUN0121,ingest_api_prices,2024-05-16 22:00:00,success,676.2,43391,
+RUN0122,ingest_api_prices,2024-03-16 21:00:00,success,98.7,34720,
+RUN0123,ingest_api_prices,2024-11-14 09:00:00,success,282.7,25229,
+RUN0124,transform_fact_transactions,2024-04-06 18:00:00,running,,0,
+RUN0125,ingest_blockchain_events,2024-07-10 07:00:00,success,632.0,6839,
+RUN0126,ingest_blockchain_events,2024-12-01 13:00:00,success,635.4,23621,
+RUN0127,ingest_api_prices,2024-09-28 20:00:00,running,,0,
+RUN0128,transform_fact_transactions,2024-02-15 11:00:00,success,46.7,15872,
+RUN0129,load_warehouse,2024-08-21 11:00:00,success,67.4,7998,
+RUN0130,transform_fact_transactions,2024-07-12 17:00:00,success,381.3,40207,
+RUN0131,load_warehouse,2024-11-28 00:00:00,failed,261.5,0,ConnectionError: DB timeout
+RUN0132,transform_fact_transactions,2024-12-14 18:00:00,failed,817.6,0,ConnectionError: DB timeout
+RUN0133,load_warehouse,2024-02-04 11:00:00,success,354.9,4817,
+RUN0134,transform_fact_transactions,2024-07-17 17:00:00,running,,0,
+RUN0135,dbt_run_models,2024-01-19 22:00:00,success,472.9,18638,
+RUN0136,dbt_run_models,2024-12-30 20:00:00,success,253.7,4407,
+RUN0137,ingest_blockchain_events,2024-02-19 21:00:00,failed,882.2,0,ConnectionError: DB timeout
+RUN0138,dbt_run_models,2024-04-01 01:00:00,running,,0,
+RUN0139,dbt_run_models,2024-03-24 17:00:00,success,368.1,13109,
+RUN0140,load_warehouse,2024-06-02 18:00:00,success,314.5,41501,
+RUN0141,dbt_run_models,2024-06-28 07:00:00,success,812.6,37046,
+RUN0142,transform_fact_transactions,2024-04-01 23:00:00,success,118.2,48914,
+RUN0143,dbt_run_models,2024-02-24 22:00:00,failed,255.2,0,ConnectionError: DB timeout
+RUN0144,load_warehouse,2024-02-28 18:00:00,success,355.5,2012,
+RUN0145,ingest_blockchain_events,2024-06-27 21:00:00,success,158.6,31142,
+RUN0146,ingest_blockchain_events,2024-07-30 01:00:00,success,751.5,181,
+RUN0147,ingest_api_prices,2024-04-22 00:00:00,success,767.1,44673,
+RUN0148,dbt_run_models,2024-02-11 21:00:00,success,133.0,38397,
+RUN0149,ingest_blockchain_events,2024-04-01 11:00:00,success,159.4,306,
+RUN0150,dbt_run_models,2024-01-10 15:00:00,success,670.6,28475,
+RUN0151,load_warehouse,2024-08-24 08:00:00,running,,0,
+RUN0152,dbt_run_models,2024-09-15 19:00:00,success,296.6,31054,
+RUN0153,dbt_run_models,2024-12-16 17:00:00,failed,135.5,0,ConnectionError: DB timeout
+RUN0154,load_warehouse,2024-11-23 11:00:00,failed,436.4,0,ConnectionError: DB timeout
+RUN0155,ingest_blockchain_events,2024-11-21 16:00:00,success,575.1,29571,
+RUN0156,dbt_run_models,2024-12-17 13:00:00,success,202.5,27224,
+RUN0157,load_warehouse,2024-05-08 15:00:00,success,368.4,33207,
+RUN0158,load_warehouse,2024-07-31 08:00:00,success,189.7,31103,
+RUN0159,dbt_run_models,2024-10-06 00:00:00,success,656.4,31005,
+RUN0160,transform_fact_transactions,2024-11-12 07:00:00,success,892.8,49085,
+RUN0161,ingest_blockchain_events,2024-04-10 05:00:00,running,,0,
+RUN0162,ingest_api_prices,2024-11-20 02:00:00,success,608.1,48739,
+RUN0163,dbt_run_models,2024-08-03 21:00:00,failed,501.9,0,ConnectionError: DB timeout
+RUN0164,load_warehouse,2024-09-29 22:00:00,running,,0,
+RUN0165,ingest_api_prices,2024-03-10 23:00:00,success,57.2,41466,
+RUN0166,ingest_api_prices,2024-04-17 17:00:00,success,114.3,37775,
+RUN0167,ingest_api_prices,2024-01-13 02:00:00,success,97.9,28539,
+RUN0168,ingest_blockchain_events,2024-01-26 10:00:00,success,642.1,29761,
+RUN0169,dbt_run_models,2024-12-12 06:00:00,success,654.3,44282,
+RUN0170,ingest_blockchain_events,2024-09-10 22:00:00,success,413.9,43407,
+RUN0171,dbt_run_models,2024-01-04 21:00:00,success,40.8,32080,
+RUN0172,ingest_blockchain_events,2024-04-15 15:00:00,success,456.8,25519,
+RUN0173,dbt_run_models,2024-09-03 12:00:00,success,515.4,49035,
+RUN0174,transform_fact_transactions,2024-05-02 03:00:00,success,406.6,3104,
+RUN0175,transform_fact_transactions,2024-10-19 11:00:00,failed,767.7,0,ConnectionError: DB timeout
+RUN0176,load_warehouse,2024-04-13 06:00:00,running,,0,
+RUN0177,dbt_run_models,2024-12-03 08:00:00,success,771.6,6752,
+RUN0178,transform_fact_transactions,2024-10-30 07:00:00,success,347.1,37134,
+RUN0179,transform_fact_transactions,2024-05-19 05:00:00,success,465.2,6198,
+RUN0180,ingest_api_prices,2024-07-11 18:00:00,success,734.4,18274,
+RUN0181,transform_fact_transactions,2024-02-16 02:00:00,failed,161.4,0,ConnectionError: DB timeout
+RUN0182,ingest_api_prices,2024-03-14 01:00:00,success,386.2,30307,
+RUN0183,load_warehouse,2024-12-22 11:00:00,success,779.0,28824,
+RUN0184,ingest_api_prices,2024-09-14 03:00:00,success,798.1,49221,
+RUN0185,ingest_api_prices,2024-06-26 21:00:00,success,455.8,19992,
+RUN0186,dbt_run_models,2024-06-13 16:00:00,running,,0,
+RUN0187,ingest_api_prices,2024-10-19 11:00:00,success,858.1,7379,
+RUN0188,ingest_api_prices,2024-04-18 07:00:00,success,214.9,24157,
+RUN0189,ingest_api_prices,2024-07-28 06:00:00,success,806.1,41059,
+RUN0190,transform_fact_transactions,2024-08-27 04:00:00,running,,0,
+RUN0191,load_warehouse,2024-07-24 17:00:00,running,,0,
+RUN0192,ingest_api_prices,2024-06-18 08:00:00,running,,0,
+RUN0193,ingest_api_prices,2024-03-16 15:00:00,success,85.1,39882,
+RUN0194,ingest_api_prices,2024-03-05 10:00:00,success,515.3,5722,
+RUN0195,load_warehouse,2024-10-21 05:00:00,success,572.1,5949,
+RUN0196,transform_fact_transactions,2024-12-10 02:00:00,failed,819.3,0,ConnectionError: DB timeout
+RUN0197,ingest_blockchain_events,2024-12-01 22:00:00,success,703.7,24238,
+RUN0198,transform_fact_transactions,2024-08-03 02:00:00,success,81.7,45506,
+RUN0199,transform_fact_transactions,2024-11-12 15:00:00,success,782.0,19254,
+RUN0200,load_warehouse,2024-10-17 02:00:00,running,,0,
