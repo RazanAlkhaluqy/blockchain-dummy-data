@@ -27,3 +27,30 @@ __pycache__/
 
 # environment
 .venv/
+
+# Airflow environment config
+.env
+
+# Airflow runtime files
+logs/
+plugins/
+dags/__pycache__/
+__pycache__/
+
+# Airflow DB (if local SQLite is used)
+airflow.db
+
+# Docker artifacts
+*.pid
+*.log
+
+# OS files
+.DS_Store
+
+# Great Expectations
+great_expectations/uncommitted/
+great_expectations/data_docs/
+great_expectations/validations/
+great_expectations/checkpoints/
+.DS_Store
+.DS_Store
