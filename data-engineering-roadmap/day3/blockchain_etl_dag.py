@@ -42,7 +42,7 @@ with DAG(
     dag_id="blockchain_etl_pipeline",
     default_args=default_args,
     description="Daily blockchain events ETL: extract → transform → load → dbt",
-    schedule_interval="0 2 * * *",   # runs at 2am every day
+    schedule="0 2 * * *",   # runs at 2am every day
     start_date=datetime(2024, 1, 1),
     catchup=False,
     tags=["blockchain", "etl", "daily"],

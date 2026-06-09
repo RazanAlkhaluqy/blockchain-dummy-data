@@ -38,7 +38,12 @@ dim_date    = pd.read_csv("dim_date.csv")
 dim_wallet  = pd.read_csv("dim_wallet.csv")
 dim_token   = pd.read_csv("dim_token.csv")
 dim_product = pd.read_csv("dim_product.csv")
-dim_scd     = pd.read_csv("dim_wallet_scd.csv", parse_dates=["valid_from","valid_to"])
+
+dim_scd = pd.read_csv("dim_wallet_scd.csv")
+
+dim_scd["valid_from"] = pd.to_datetime(dim_scd["valid_from"])
+dim_scd["valid_to"]   = dim_scd["valid_to"].astype(str)   # keep as string — 9999-12-31 overflows ns
+
 fact_tx     = pd.read_csv("fact_transactions.csv", parse_dates=["created_at"])
 
 print(f"\n  dim_date        : {len(dim_date):>5} rows  — date dimension (366 days in 2024)")
@@ -149,12 +154,14 @@ exam("Each wallet has exactly 2 SCD records (before + after)",
      check_fn=lambda _: dim_scd.groupby("wallet_id").size().eq(2).all())
 exam("Only one current record per wallet (is_current=1)",
      check_fn=lambda _: current.groupby("wallet_id").size().eq(1).all())
+
 exam("All historical records have valid_to < 9999-12-31",
-     check_fn=lambda _: (historical["valid_to"] < pd.Timestamp("9999-12-31")).all())
+     check_fn=lambda _: (historical["valid_to"] < "9999-12-31").all())
 exam("All current records have valid_to == 9999-12-31",
-     check_fn=lambda _: (current["valid_to"] == pd.Timestamp("9999-12-31")).all())
+     check_fn=lambda _: (current["valid_to"] == "9999-12-31").all())
 exam("valid_from < valid_to for all records",
-     check_fn=lambda _: (dim_scd["valid_from"] < dim_scd["valid_to"]).all())
+     check_fn=lambda _: (dim_scd["valid_from"].astype(str) < dim_scd["valid_to"]).all())
+
 exam("KYC upgraded in current version (kyc=1 for current records)",
      check_fn=lambda _: current["kyc_verified"].eq(1).all())
 exam("Historical records had risk_level = 'low'",

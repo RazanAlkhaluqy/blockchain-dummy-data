@@ -298,10 +298,13 @@ section("EXAM 4 — Window Functions")
 if SPARK_OK:
     exam("Ranked result has max rank 3 per chain",
          result=ranked.agg(F.max("rank_in_chain")).collect()[0][0], expected=3)
-    exam("Running total is monotonically increasing",
-         check_fn=lambda _: (
-             running.select("cumulative_vol").rdd.map(lambda r:r[0]).collect()
-             == sorted(running.select("cumulative_vol").rdd.map(lambda r:r[0]).collect())))
+   
+   
+cumulative_vals = [row[0] for row in running.select("cumulative_vol").collect()]
+
+exam("Running total is monotonically increasing",
+     check_fn=lambda _: cumulative_vals == sorted(cumulative_vals))
+
 
 # ════════════════════════════════════════════════════════════════
 # TASK 5 — WRITE PARTITIONED PARQUET
